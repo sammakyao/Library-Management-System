@@ -1,15 +1,17 @@
+// import pkgs
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+
 public class  BookManager {
     public static ArrayList<Book> bookList = new ArrayList<>();
     static ArrayList<Book> bookWaitList = new ArrayList<>();
     static String file;
     public static void addBookFromFile(String filename) throws IOException {
         file = filename;
-        // tested
+ 
         BufferedReader br = new BufferedReader(new FileReader(filename));
         String line = br.readLine();
         while(line != null){
@@ -28,27 +30,23 @@ public class  BookManager {
     }
 
     public static void addToBookList(Book book){
-        // tested
+        
         bookList.add(book);
     }
     public static void addToWaitList(Book book){
-        //tested
-        // add book to waitlist if checked out
+    
         bookWaitList.add(book);
     }
     public static void removeFromWaitList(Book book){
-        //tested
-        // remove from waitlist if checked in
+        
         bookWaitList.remove(book);
     }
     public static void checkOutBook(int inBookID, String userName){
-        //tested
-        // change the book's checkin status to true in bookList
+        
         for (Book b : bookList){
             if (b.getBookID() == inBookID){
                 b.isCheckedOut = true;
                 b.checkedTo = userName;
-                // if already checked out then call the addToWaitList method to add the book to waitList
                 addToWaitList(b);
             }
         }
@@ -63,13 +61,11 @@ public class  BookManager {
         }
     }
     public static void checkInBook(int inBookID){
-        //tested
-        // change the book's checkin status to false in bookList
+  
         for (Book b : bookList){
             if (b.getBookID() == inBookID){
                 b.isCheckedOut = false;
                 b.checkedTo = "none";
-                // if checked in and was in waitList then call the removeFromWaitList method
                 removeFromWaitList(b);
             }
         }
