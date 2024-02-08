@@ -17,17 +17,16 @@ public class LibrarySystem {
         frame.setSize(500, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // frame not resizable
+        
         frame.setResizable(false);
         frame.getContentPane().setBackground(Color.WHITE);
 
-        // the box layout will be from top to bottom
-        // testing a different layout
+        
         frame.setLayout(new FlowLayout());
 
         JLabel label = new JLabel("Welcome to XYZ Online Library System", JLabel.CENTER);
 
-        // set font style and size
+        
         label.setFont(new Font("Verdana", Font.BOLD, 20));
 
         JButton get_book_information = new JButton("Get Book Information");
@@ -55,15 +54,14 @@ public class LibrarySystem {
                 JTextField textBook = new JTextField(20);
                 testFrame.add(text);
                 testFrame.add(textBook);
-                //get the user input/keyword
+                
                 enter.addActionListener(new AbstractAction() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         String command = e.getActionCommand();
                         if ("Enter".equals(command)){
-                            //get the keyword
+                           
                             String keyword = textBook.getText();
-                            //original frame disappears and the new one show up with results of the search based on input keyword
                             testFrame.dispose();
                             JFrame newFrame = new JFrame();
                             newFrame.setSize(900, 250);
@@ -125,7 +123,6 @@ public class LibrarySystem {
                 checkOut();
             }
         });
-        // messing around with some code
         JButton viewLibraryButton = new JButton("View Library");
         viewLibraryButton.addActionListener(new AbstractAction() {
             @Override
@@ -134,7 +131,6 @@ public class LibrarySystem {
 
             }
         });
-        //exit button
         JButton exit = new JButton("Exit Program");
         exit.addActionListener(new AbstractAction() {
             @Override
@@ -161,9 +157,7 @@ public class LibrarySystem {
         frame.add(exit);
         frame.setVisible(true);
     }
-    // use this method in all the button methods ?? searches through directory of books. utilize JComboBox
     public static void searchBooks(){
-        // this opens a new window with a text input thing but you can't press enter on it because it doesnt do anything
         JFrame testFrame = new JFrame("BOOK SEARCH");
         testFrame.setSize(400, 100);
         testFrame.setResizable(false);
@@ -226,7 +220,6 @@ public class LibrarySystem {
         searchBooks();
     }
     public static void checkIn(){
-        //searchBooks();
         JFrame testFrame = new JFrame("BOOK SEARCH");
         testFrame.setSize(400, 100);
         testFrame.setResizable(false);
@@ -290,7 +283,6 @@ public class LibrarySystem {
         testFrame.setVisible(true);
     }
     public static void checkOut(){
-        //searchBooks();
         JFrame testFrame = new JFrame("BOOK SEARCH");
         testFrame.setSize(400, 100);
         testFrame.setResizable(false);
@@ -384,19 +376,7 @@ public class LibrarySystem {
         library.setLayout(new FlowLayout());
         library.getContentPane().setBackground(Color.LIGHT_GRAY);
         library.setLocationRelativeTo(null);
-        /**
-         we should change PrintBookList so that it returns something because idk how else to print it here
-         */
-
-        /**
-         String printed = "";
-         for (Book b : BookManager.bookList){
-         printed += "<html>" + b.toString() +"</html>"; // + "<br/>";
-         }
-         //JLabel text = new JLabel(BookManager.printBookList());
-         JLabel text = new JLabel(printed);
-         library.add(text);
-         */
+        
         for(Book b : BookManager.bookList){
             JLabel label = new JLabel(b.toString());
             library.add(label);
