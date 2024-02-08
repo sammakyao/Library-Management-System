@@ -1,0 +1,13 @@
+The Midnight Library,Fantasy,Matt Haig,false,345,none
+All Your Perfects,Romance,Colleen Hoover,false,123,none
+The Kite Runner,Drama,Khaled Hosseini,false,765,none
+Pride and Prejudice,Romance,Jane Austen,false,251,none
+Norwegian Wood,Romance,Haruki Murakami,false,982,none
+Sputnik Sweetheart,Fiction,Haruki Murakami,false,276,none
+The Outsiders,Drama,S. E. Hinton,false,876,none
+The Sun Is Also a Star,Fiction,Nicola Yoon,false,198,none
+Educated,Memoir,Tara Westover,true,213,none
+The Goldfinch,Thriller,Donna Tartt,false,143,none
+Daisy Jones and The Six,Fiction,Taylor Jenkins Reid,false,723,none
+The Hobbit,Fantasy,J. R. R. Tolkien,false,178,none
+Frankenstein,Horror Fiction,Mary Shelley,false,678,none
