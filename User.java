@@ -1,3 +1,5 @@
+// import pkgs
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -64,6 +66,7 @@ public class User {
         JLabel label = new JLabel("Welcome to XYZ Online Library System", JLabel.CENTER);
         label.setFont(new Font("Verdana", Font.BOLD, 20));
 
+        // button 
         JButton logIn = new JButton("Log in");
         logIn.setBounds(800,800, 800, 800);
         logIn.addActionListener(new AbstractAction() {
